@@ -34,7 +34,7 @@ class Messenger extends Component {
   }
 
   renderMessages () {
-    return this.getMessages().map((message) => (
+    return this.getMessages().map(message => (
       <Message key={message._id} message={message} />
     ));
   }
