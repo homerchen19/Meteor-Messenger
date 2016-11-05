@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import Message from './Message'
 import MessageInput from './MessageInput'
+import AccountsUIWrapper from './AccountsUIWrapper';
 import styles from './Messenger.style';
 
 class Messenger extends Component {
@@ -14,6 +15,7 @@ class Messenger extends Component {
               Meteor-Messenger
             </div>
             <div style={styles.account}>
+              <AccountsUIWrapper />
             </div>
           </div>
           <div style={styles.messages}>
