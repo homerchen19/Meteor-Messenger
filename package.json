@@ -8,5 +8,11 @@
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.9.1",
+    "eslint-plugin-meteor": "^4.0.1",
+    "eslint-plugin-react": "^6.5.0"
   }
 }
