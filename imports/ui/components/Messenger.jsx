@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import Message from './Message'
 import MessageInput from './MessageInput'
@@ -25,19 +25,15 @@ class Messenger extends Component {
     )
   }
 
-  getMessages () {
-    return [
-      { _id: 1, username: 'Max', text: 'Hello. How are you?' },
-      { _id: 2, username: 'Jack', text: 'I\'m find. Thank you and you' },
-      { _id: 3, username: 'Max', text: 'Great!' }
-    ];
-  }
-
   renderMessages () {
-    return this.getMessages().map(message => (
+    return this.props.messages.map(message => (
       <Message key={message._id} message={message} />
     ));
   }
 }
+
+Messenger.propTypes = {
+  messages: PropTypes.array
+};
 
 export default Messenger
