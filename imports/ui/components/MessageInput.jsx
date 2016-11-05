@@ -1,4 +1,6 @@
+import { Meteor } from 'meteor/meteor';
 import React, { Component } from 'react';
+import '../../api/messages/methods';
 import styles from './MessageInput.style';
 
 class MessageInput extends Component {
@@ -28,7 +30,7 @@ class MessageInput extends Component {
 
   handleKeyDown (e) {
     if (e.key === 'Enter') {
-      console.log(this.state.value);
+      Meteor.call('messages.insert', this.state.value);
       this.setState({ value: '' });
     }
   }
